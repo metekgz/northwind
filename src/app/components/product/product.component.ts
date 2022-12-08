@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent implements OnInit {
-  products: Product[] = [];
+  products: Product[];
   dataLoaded = false;
   filterText = '';
 
@@ -51,5 +51,6 @@ export class ProductComponent implements OnInit {
   addToCart(product: Product) {
     this.toastrService.success('Sepete Eklendi', product.productName);
     this.cartService.addToCart(product);
+    console.log(product.productName + " added")
   }
 }
