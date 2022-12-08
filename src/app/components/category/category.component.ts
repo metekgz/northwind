@@ -24,6 +24,7 @@ export class CategoryComponent implements OnInit {
 
   setCurrentCategory(category: Category) {
     this.currentCategory = category;
+    console.log(category.categoryName +" kategorisi seçildi")
   }
 
   getCurrentCategoryClass(category: Category) {

@@ -25,4 +25,9 @@ export class ProductService {
   add(product:Product):Observable<ResponseModel>{
     return this.httpClient.post<ResponseModel>(this.apiUrl + "products/add",product)
   }
+
+  delete(product:Product):Observable<ListResponseModel<Product>>{
+    let newPath = this.apiUrl + 'products/delete'+ product;
+    return this.httpClient.delete<ListResponseModel<Product>>(newPath);
+  }
 }

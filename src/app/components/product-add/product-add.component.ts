@@ -41,7 +41,6 @@ export class ProductAddComponent implements OnInit {
             this.toastrService.error(responseError.error.Errors[i].ErrorMessage,"Doğrulama hatası")
           }
         }
-
       })
     } else {
       this.toastrService.error("Tekrar kontrol ediniz","Formunuz Eksik veya Hatalı")
